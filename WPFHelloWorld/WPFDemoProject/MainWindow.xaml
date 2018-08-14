@@ -27,12 +27,19 @@
         <TextBlock Text="This is my first WPF application" Grid.Row="1" Grid.Column="1" FontSize="20" 
                    FontFamily="Ariel" FontStyle="Italic" FontWeight="Bold" TextDecorations="Underline" 
                    Grid.ColumnSpan="2"/>
+        
         <TextBlock Text="Enter first name" Grid.Column="1" Grid.Row="2" />
         <TextBox Name="tbxFirstName" Grid.Column="2" Grid.Row="2" Width="100"/>
-        <Button Content="Click Me!" Name="btnClickMe" Grid.Column="1" Grid.Row="3" Click="btnClickMe_Click" />
 
-        <ComboBox Name="cboStudentNames" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" >
-            
+        <ComboBox Name="cboStudentNames" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding FullName}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
         </ComboBox>
+
+        <Button Content="Click Me!" Name="btnClickMe" Grid.Column="1" Grid.Row="4" Click="btnClickMe_Click" />
+
     </Grid>
 </Window>
