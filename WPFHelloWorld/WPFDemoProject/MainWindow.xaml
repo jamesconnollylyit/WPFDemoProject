@@ -41,5 +41,20 @@
 
         <Button Content="Click Me!" Name="btnClickMe" Grid.Column="1" Grid.Row="4" Click="btnClickMe_Click" />
 
+        <!--<Image Grid.Column="4" Grid.Row="1" Grid.RowSpan="6" Source="c:\demofiles\user.png" />-->
+
+        <!--<MediaElement Grid.Column="4" Grid.Row="1" Grid.RowSpan="6" Source="c:\demofiles\MadMax.mp4" />-->
+
+        <ScrollViewer Grid.Column="4" Grid.Row="1" Grid.RowSpan="6">
+            <StackPanel >
+                <Image Source="c:\demofiles\1.jpg" MaxHeight="200" MaxWidth="200" />
+                <Image Source="c:\demofiles\2.jpg" MaxHeight="200" MaxWidth="200" />
+                <Image Source="c:\demofiles\3.jpg" MaxHeight="200" MaxWidth="200" />
+                <Image Source="c:\demofiles\4.jpg" MaxHeight="200" MaxWidth="200" />
+            </StackPanel>
+        </ScrollViewer>
+        
+        
+
     </Grid>
 </Window>
